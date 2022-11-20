@@ -1,0 +1,17 @@
+GET /localhost:8080/hal/customers
+
+###
+
+GET /localhost:8080/hal/orders
+
+###
+
+GET /localhost:8080/hal/customers/7
+
+###
+
+GET /localhost:8080/hal/orders/7
+
+###
+
+GET /localhost:8080/hal/orders/customers?customerId=5

@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+
+  db:
+    image: postgres:11.1-alpine
+    ports:
+      - "127.0.0.1:7777:5432"
+    volumes:
+      - adminka_db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: adminka
+      POSTGRES_USER: ilsur
+      POSTGRES_PASSWORD: ilsur
+
+volumes:
+  adminka_db:

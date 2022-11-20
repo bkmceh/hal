@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS customers
+(
+
+    id    BIGSERIAL PRIMARY KEY,
+    name  VARCHAR(16) NOT NULL,
+    email VARCHAR(16) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS orders
+(
+    id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(16) NOT NULL,
+    customer_id BIGSERIAL REFERENCES customers(id)
+)
